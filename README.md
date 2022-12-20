@@ -9,7 +9,7 @@ And Change the root_dataset_dir in __datasetCommonParams in config/config_regres
 
 For experiment of the asr error and sentiment word replacement, you should download the corresponding data Here.
 
-- [Google Drive](https://drive.google.com/drive/folders/1A2S4pqCHryGmiqnNSPLv7rEg63WvjCSk?usp=sharing)
+- [Google Drive](https://drive.google.com/file/d/13LMfmTlP47snrb5qKUzbLfZyZjLarvx_/view?usp=share_link)
 
 Using the following script to run our codes.
 
@@ -19,9 +19,8 @@ python run.py --modelName niat --datasetName mosi
 
 and evaluate the trained model with others type of modality feature missing.
 
-For performance reproduce, we provided the saved model parameters. You should download the niat-{mosi/mosei}-method_one-0.2-{111x}.pth file Here, and place them into saved_models/normals then run the Test.py.
+For performance reproduce, we provided the saved model parameters. You should unzip the niat-{mosi/mosei}-method_one-0.2-{111x}.pth file from the above link [Here](https://drive.google.com/file/d/13LMfmTlP47snrb5qKUzbLfZyZjLarvx_/view?usp=share_link), and place them into saved_models/normals then run the Test.py.
 
-- [Saved model parameters](https://drive.google.com/drive/folders/1A2S4pqCHryGmiqnNSPLv7rEg63WvjCSk?usp=sharing)
 
 ```python
 python Test.py --modelName niat --datasetName mosi --noise_type [test_noise_type]
