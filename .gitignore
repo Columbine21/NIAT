@@ -1,3 +1,5 @@
 results/logs
 results/results
 results/saved_models
+
+data/noise_data

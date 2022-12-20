@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from models.AMIO import AMIO
 from trains.ATIO import ATIO
-from data.rubost_load_data import robustnessTestLoader
+from data.robust_load_data import robustnessTestLoader
 from config.config_regression import ConfigRegression
 from utils.functions import assign_gpu, setup_seed, calculate_AUILC
 

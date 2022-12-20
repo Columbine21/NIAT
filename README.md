@@ -18,6 +18,7 @@ python run.py --modelName niat --datasetName mosi
 ```
 
 and evaluate the trained model with others type of modality feature missing.
+
 For performance reproduce, we provided the saved model parameters. You should download the niat-{mosi/mosei}-method_one-0.2-{111x}.pth file Here, and place them into saved_models/normals then run the Test.py.
 
 - [Saved model parameters](https://drive.google.com/drive/folders/1A2S4pqCHryGmiqnNSPLv7rEg63WvjCSk?usp=sharing)
