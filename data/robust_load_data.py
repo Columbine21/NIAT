@@ -94,7 +94,7 @@ class MMDataset(Dataset):
                 raise NotImplementedError
 
         # Missing config is used for the scenarios where original data is not needed.
-        if self.missing_config is not None and self.missing_config['noise_type'].startswith('static'):
+        if self.missing_config is not None:
             self.noiser = staticNoise(self.missing_config)
             
             if self.missing_config['noise_type'] in ['static_antonym_noise', 'static_delSentiWords_noise']:
@@ -271,12 +271,12 @@ def robustnessTestLoader(args, num_workers):
         # ASR additive
         case 'static_random_drop':
             datasets = {
-                f'Temporal Drop {r}%': MMDataset(args, 'test', missing_config={'noise_type': 'static_random_drop', 'seeds_list': args.noise_seed_list, 'missing_rate': r})
+                f'Random Drop {r}%': MMDataset(args, 'test', missing_config={'noise_type': 'static_random_drop', 'seeds_list': args.noise_seed_list, 'missing_rate': r})
                 for r in [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
             }
-        case 'static_frame_drop':
+        case 'temporal_feature_missing':
             datasets = {
-                f'Temporal Drop {r}%': MMDataset(args, 'test', missing_config={'noise_type': 'static_frame_drop', 'seeds_list': args.noise_seed_list, 'missing_rate': r})
+                f'Temporal Drop {r}%': MMDataset(args, 'test', missing_config={'noise_type': 'temporal_feature_missing', 'seeds_list': args.noise_seed_list, 'missing_rate': r})
                 for r in [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
             }
         case 'static_block_drop':

@@ -26,7 +26,7 @@ def setup_seed(seed):
 
 def set_log(args):
     tune = 'tune' if args.is_tune else 'uniform'
-    log_file_path = f'logs/{args.modelName}-{args.augment}-{args.datasetName}-{tune}.log'
+    log_file_path = f'results/logs/{args.modelName}-{args.augment}-{args.datasetName}-{tune}.log'
     if not os.path.exists(os.path.dirname(log_file_path)):
         os.makedirs(os.path.dirname(log_file_path))
     # set logging

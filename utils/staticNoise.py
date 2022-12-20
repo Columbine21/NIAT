@@ -9,7 +9,7 @@ class staticNoise():
         self.config = config
         self.strategy_map = {
             'static_random_drop': self.__RANDOM_DROP,
-            'static_frame_drop': self.__FRAME_DROP,
+            'temporal_feature_missing': self.__FRAME_DROP,
             'static_block_drop': self.__BLOCK_DROP,
             'static_entire_drop': self.__ENTIRE_DROP,
             'static_antonym_noise': self.__ANTONYM_NOISE,

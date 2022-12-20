@@ -19,8 +19,8 @@ def parse_args():
     parser.add_argument('--augment_rate', type=int, default=0.2, help='0.1, 0.2, 0.4')
     parser.add_argument('-g', '--gpu-ids', action='append', default=[])
     parser.add_argument('--res_save_dir', type=str, default='results/results', help='path to save results.')
-    parser.add_argument('--noise_type', type=str, default='static_frame_drop', 
-                        help='support static_frame_drop/static_block_drop/static_random_drop/static_entire_drop/static_antonym_noise/static_asr_noise/static_delSentiWords_noise')
+    parser.add_argument('--noise_type', type=str, default='temporal_feature_missing', 
+                        help='support temporal_feature_missing/static_block_drop/static_random_drop/static_entire_drop/static_antonym_noise/static_asr_noise/static_delSentiWords_noise')
     parser.add_argument('--model_save_path', type=str, default='results/saved_models', help='dirpath to the pretrained save results.')
     parser.add_argument('--noise_seed_list', type=list, default=[1,11,111,1111,11111], help='indicates the seed for test period imperfect construction')
     return parser.parse_args()
@@ -84,11 +84,11 @@ def run_normal(args):
                 'A_D': dict(),
                 'V_D': dict()
             }
-            result_cur['T_D'] = results['Text Modality Drop']
-            result_cur['A_D'] = results['Audio Modality Drop']
-            result_cur['V_D'] = results['Vision Modality Drop']
+            result_cur['T_D'] = results[0]
+            result_cur['A_D'] = results[1]
+            result_cur['V_D'] = results[2]
 
-        elif args.noise_type in ['static_frame_drop', 'static_block_drop', 'static_random_drop']:
+        elif args.noise_type in ['temporal_feature_missing', 'static_block_drop', 'static_random_drop']:
             result_cur = dict()
             for k in list(results[list(results.keys())[0]].keys()):
                 result_cur[k] = calculate_AUILC([results[v][k] for v in list(results.keys())])
