@@ -1,0 +1,80 @@
+2022-12-20 12:21:33:INFO:Start running niat with method_one...
+2022-12-20 12:21:33:INFO:<Storage{'need_task_scheduling': False, 'is_tune': False, 'modelName': 'niat', 'datasetName': 'mosi', 'augment': 'method_one', 'augment_rate': 0.2, 'test_mode': 'frame_drop', 'num_workers': 0, 'model_save_dir': 'results/saved_models', 'res_save_dir': 'results/results/normals', 'gpu_ids': [], 'test_seed_list': [1, 11, 111, 1111, 11111], 'seeds': [1111, 1112, 1113], 'dataPath': '/home/sharing/lyh/meta_mmsa_yzq/MMSA/data/mosi_aligned.pkl', 'seq_lens': (50, 50, 50), 'feature_dims': (768, 5, 20), 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': True, 'early_stop': 8, 'need_normalized': False, 'use_bert': True, 'use_bert_finetune': True, 'fusion': 'structure_one', 'reconstruction': 'structure_one', 'discriminator': 'structure_one', 'classifier': 'structure_one', 'fus_d_l': 96, 'fus_d_a': 24, 'fus_d_v': 40, 'fus_conv1d_kernel_l': 3, 'fus_conv1d_kernel_a': 3, 'fus_conv1d_kernel_v': 9, 'fus_nheads': 8, 'fus_layers': 3, 'fus_attn_mask': True, 'fus_position_embedding': False, 'fus_relu_dropout': 0.0, 'fus_embed_dropout': 0.5, 'fus_res_dropout': 0.4, 'fus_attn_dropout': 0.5, 'rec_hidden_dim1': 80, 'rec_dropout': 0.4, 'rec_hidden_dim2': 96, 'disc_hidden_dim1': 128, 'disc_hidden_dim2': 64, 'clf_dropout': 0.3, 'clf_hidden_dim': 80, 'alpha': 0.6, 'batch_size': 32, 'beta': 1.0, 'learning_rate': 0.002, 'decay': 1e-05, 'learning_rate_bert': 2e-05, 'learning_rate_other': 0.0005, 'weight_decay_bert': 0.0001, 'weight_decay_other': 0.0005, 'grad_clip': 0.6, 'seed': 1111}>
+2022-12-20 12:21:33:INFO:Found gpu 1, used memory 278986752.
+2022-12-20 12:21:33:INFO:train samples: (1284,)
+2022-12-20 12:21:34:INFO:valid samples: (229,)
+2022-12-20 12:21:34:INFO:test samples: (686,)
+2022-12-20 12:21:34:INFO:test samples: (686,)
+2022-12-20 12:21:34:INFO:test samples: (686,)
+2022-12-20 12:21:35:INFO:test samples: (686,)
+2022-12-20 12:21:35:INFO:test samples: (686,)
+2022-12-20 12:21:35:INFO:test samples: (686,)
+2022-12-20 12:21:35:INFO:test samples: (686,)
+2022-12-20 12:21:35:INFO:test samples: (686,)
+2022-12-20 12:21:36:INFO:test samples: (686,)
+2022-12-20 12:21:36:INFO:test samples: (686,)
+2022-12-20 12:21:36:INFO:test samples: (686,)
+2022-12-20 12:21:36:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:37:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2022-12-20 12:21:37:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:38:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-12-20 12:21:38:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:39:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2022-12-20 12:21:39:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:40:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2022-12-20 12:21:40:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:41:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-12-20 12:21:41:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-12-20 12:21:42:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:21:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-12-20 12:21:47:INFO:The model has 110718042 trainable parameters
+2022-12-20 12:22:04:INFO:TRAIN-(niat) (1/1/1)>> rloss: 0.6925 closs: 1.1700 dloss: 0.1387  Has0_acc_2: 0.6421  Has0_F1_score: 0.6217  Non0_acc_2: 0.6377  Non0_F1_score: 0.6164  Mult_acc_5: 0.2352  Mult_acc_7: 0.2270  MAE: 1.1722  Corr: 0.3900 
+2022-12-20 12:22:05:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7511  Has0_F1_score: 0.7532  Non0_acc_2: 0.7870  Non0_F1_score: 0.7882  Mult_acc_5: 0.4061  Mult_acc_7: 0.2445  MAE: 1.1633  Corr: 0.6369  Loss: 2.2117 
+2022-12-20 12:22:20:INFO:TRAIN-(niat) (1/2/1)>> rloss: 0.6053 closs: 0.8358 dloss: 0.1386  Has0_acc_2: 0.7870  Has0_F1_score: 0.7879  Non0_acc_2: 0.8042  Non0_F1_score: 0.8046  Mult_acc_5: 0.4104  Mult_acc_7: 0.3832  MAE: 0.8362  Corr: 0.7048 
+2022-12-20 12:22:20:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7795  Has0_F1_score: 0.7799  Non0_acc_2: 0.8032  Non0_F1_score: 0.8023  Mult_acc_5: 0.4847  Mult_acc_7: 0.3712  MAE: 0.9944  Corr: 0.6724  Loss: 1.9797 
+2022-12-20 12:22:28:INFO:Start running niat with method_one...
+2022-12-20 12:22:28:INFO:<Storage{'need_task_scheduling': False, 'is_tune': False, 'modelName': 'niat', 'datasetName': 'mosi', 'augment': 'method_one', 'augment_rate': 0.2, 'test_mode': 'frame_drop', 'num_workers': 0, 'model_save_dir': 'results/saved_models', 'res_save_dir': 'results/results/normals', 'gpu_ids': [], 'test_seed_list': [1, 11, 111, 1111, 11111], 'seeds': [1111, 1112, 1113], 'dataPath': '/home/sharing/lyh/meta_mmsa_yzq/MMSA/data/mosi_aligned.pkl', 'seq_lens': (50, 50, 50), 'feature_dims': (768, 5, 20), 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': True, 'early_stop': 8, 'need_normalized': False, 'use_bert': True, 'use_bert_finetune': True, 'fusion': 'structure_one', 'reconstruction': 'structure_one', 'discriminator': 'structure_one', 'classifier': 'structure_one', 'fus_d_l': 96, 'fus_d_a': 24, 'fus_d_v': 40, 'fus_conv1d_kernel_l': 3, 'fus_conv1d_kernel_a': 3, 'fus_conv1d_kernel_v': 9, 'fus_nheads': 8, 'fus_layers': 3, 'fus_attn_mask': True, 'fus_position_embedding': False, 'fus_relu_dropout': 0.0, 'fus_embed_dropout': 0.5, 'fus_res_dropout': 0.4, 'fus_attn_dropout': 0.5, 'rec_hidden_dim1': 80, 'rec_dropout': 0.4, 'rec_hidden_dim2': 96, 'disc_hidden_dim1': 128, 'disc_hidden_dim2': 64, 'clf_dropout': 0.3, 'clf_hidden_dim': 80, 'alpha': 0.6, 'batch_size': 32, 'beta': 1.0, 'learning_rate': 0.002, 'decay': 1e-05, 'learning_rate_bert': 2e-05, 'learning_rate_other': 0.0005, 'weight_decay_bert': 0.0001, 'weight_decay_other': 0.0005, 'grad_clip': 0.6, 'seed': 1111}>
+2022-12-20 12:22:28:INFO:Found gpu 1, used memory 278986752.
+2022-12-20 12:22:28:INFO:train samples: (1284,)
+2022-12-20 12:22:28:INFO:valid samples: (229,)
+2022-12-20 12:22:29:INFO:test samples: (686,)
+2022-12-20 12:22:29:INFO:test samples: (686,)
+2022-12-20 12:22:29:INFO:test samples: (686,)
+2022-12-20 12:22:29:INFO:test samples: (686,)
+2022-12-20 12:22:30:INFO:test samples: (686,)
+2022-12-20 12:22:30:INFO:test samples: (686,)
+2022-12-20 12:22:30:INFO:test samples: (686,)
+2022-12-20 12:22:30:INFO:test samples: (686,)
+2022-12-20 12:22:30:INFO:test samples: (686,)
+2022-12-20 12:22:31:INFO:test samples: (686,)
+2022-12-20 12:22:31:INFO:test samples: (686,)
+2022-12-20 12:22:31:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:32:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2022-12-20 12:22:32:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:33:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-12-20 12:22:33:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:34:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2022-12-20 12:22:34:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:35:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2022-12-20 12:22:35:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:35:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-12-20 12:22:35:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:36:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-12-20 12:22:36:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2022-12-20 12:22:37:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-12-20 12:22:40:INFO:The model has 110718042 trainable parameters
+2022-12-20 12:22:54:INFO:TRAIN-(niat) (1/1/1)>> rloss: 0.6925 closs: 1.1700 dloss: 0.1387  Has0_acc_2: 0.6421  Has0_F1_score: 0.6217  Non0_acc_2: 0.6377  Non0_F1_score: 0.6164  Mult_acc_5: 0.2352  Mult_acc_7: 0.2270  MAE: 1.1722  Corr: 0.3900 
+2022-12-20 12:22:55:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7511  Has0_F1_score: 0.7532  Non0_acc_2: 0.7870  Non0_F1_score: 0.7882  Mult_acc_5: 0.4061  Mult_acc_7: 0.2445  MAE: 1.1633  Corr: 0.6369  Loss: 2.2117 
+2022-12-20 12:23:09:INFO:TRAIN-(niat) (1/2/1)>> rloss: 0.6053 closs: 0.8358 dloss: 0.1386  Has0_acc_2: 0.7870  Has0_F1_score: 0.7879  Non0_acc_2: 0.8042  Non0_F1_score: 0.8046  Mult_acc_5: 0.4104  Mult_acc_7: 0.3832  MAE: 0.8362  Corr: 0.7048 
+2022-12-20 12:23:10:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7795  Has0_F1_score: 0.7799  Non0_acc_2: 0.8032  Non0_F1_score: 0.8023  Mult_acc_5: 0.4847  Mult_acc_7: 0.3712  MAE: 0.9944  Corr: 0.6724  Loss: 1.9797 
+2022-12-20 12:23:24:INFO:TRAIN-(niat) (1/3/1)>> rloss: 0.5414 closs: 0.7053 dloss: 0.1386  Has0_acc_2: 0.8470  Has0_F1_score: 0.8474  Non0_acc_2: 0.8652  Non0_F1_score: 0.8652  Mult_acc_5: 0.4685  Mult_acc_7: 0.4326  MAE: 0.7086  Corr: 0.7913 
+2022-12-20 12:23:25:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7860  Has0_F1_score: 0.7881  Non0_acc_2: 0.8218  Non0_F1_score: 0.8226  Mult_acc_5: 0.4629  Mult_acc_7: 0.3428  MAE: 1.0273  Corr: 0.6840  Loss: 2.0693 
+2022-12-20 12:23:38:INFO:TRAIN-(niat) (2/4/1)>> rloss: 0.5071 closs: 0.6417 dloss: 0.1386  Has0_acc_2: 0.8575  Has0_F1_score: 0.8580  Non0_acc_2: 0.8769  Non0_F1_score: 0.8770  Mult_acc_5: 0.5350  Mult_acc_7: 0.4926  MAE: 0.6270  Corr: 0.8324 
+2022-12-20 12:23:39:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7882  Has0_F1_score: 0.7851  Non0_acc_2: 0.8009  Non0_F1_score: 0.7969  Mult_acc_5: 0.4934  Mult_acc_7: 0.3646  MAE: 0.9617  Corr: 0.7078  Loss: 1.8764 
+2022-12-20 12:23:53:INFO:TRAIN-(niat) (1/5/1)>> rloss: 0.4861 closs: 0.5460 dloss: 0.1386  Has0_acc_2: 0.8801  Has0_F1_score: 0.8803  Non0_acc_2: 0.8972  Non0_F1_score: 0.8971  Mult_acc_5: 0.5693  Mult_acc_7: 0.5206  MAE: 0.5453  Corr: 0.8741 
+2022-12-20 12:23:54:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7707  Has0_F1_score: 0.7689  Non0_acc_2: 0.7870  Non0_F1_score: 0.7840  Mult_acc_5: 0.4934  Mult_acc_7: 0.3886  MAE: 0.8951  Corr: 0.7143  Loss: 1.6667 
+2022-12-20 12:24:08:INFO:TRAIN-(niat) (1/6/1)>> rloss: 0.4676 closs: 0.5148 dloss: 0.1386  Has0_acc_2: 0.8836  Has0_F1_score: 0.8838  Non0_acc_2: 0.9033  Non0_F1_score: 0.9032  Mult_acc_5: 0.6211  Mult_acc_7: 0.5736  MAE: 0.4892  Corr: 0.8983 
+2022-12-20 12:24:09:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7904  Has0_F1_score: 0.7865  Non0_acc_2: 0.8009  Non0_F1_score: 0.7962  Mult_acc_5: 0.4934  Mult_acc_7: 0.3559  MAE: 0.9559  Corr: 0.7086  Loss: 1.9395 
+2022-12-20 12:24:22:INFO:TRAIN-(niat) (2/7/1)>> rloss: 0.4509 closs: 0.4757 dloss: 0.1386  Has0_acc_2: 0.8991  Has0_F1_score: 0.8994  Non0_acc_2: 0.9180  Non0_F1_score: 0.9180  Mult_acc_5: 0.6452  Mult_acc_7: 0.5927  MAE: 0.4620  Corr: 0.9102 
+2022-12-20 12:24:22:INFO:VAL-(niat-method_one) >>  Has0_acc_2: 0.7795  Has0_F1_score: 0.7815  Non0_acc_2: 0.8056  Non0_F1_score: 0.8064  Mult_acc_5: 0.4389  Mult_acc_7: 0.3406  MAE: 0.9145  Corr: 0.6921  Loss: 1.8967 
