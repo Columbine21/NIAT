@@ -9,7 +9,7 @@
   - **modality feature missing**, which models imperfections resulting from potential facial detection failure, transmission error with zero padding vectors and unknown word token for text. 
 
 <div align="center">
-<img src="assets/taxonomy.png" alt="taxonomy" width="50%" />
+<img src="assets/taxonomy.png" alt="taxonomy" width="64%" />
 </div>
 ## Model - Noise Imitation based Adversarial Training.
 
