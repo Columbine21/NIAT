@@ -8,8 +8,9 @@
   - **ASR error** focuses on the imperfection within the predominant linguistic modality based on the fact that transcribed text is noisy and vulnerable to attack.
   - **modality feature missing**, which models imperfections resulting from potential facial detection failure, transmission error with zero padding vectors and unknown word token for text. 
 
-<img src="assets/taxonomy.png" alt="taxonomy" style="zoom:50%;" />
-
+<div align="center">
+<img src="assets/taxonomy.png" alt="taxonomy" width="50%" />
+</div>
 ## Model - Noise Imitation based Adversarial Training.
 
 >  one unified framework capable of achieving robust performance against four distinct forms of potential data imperfections, which include (random, temporal, and structural temporal) modality feature missing, entire modality missing, ASR error, as well as attacks on text modality, simultaneously.
