@@ -11,7 +11,7 @@
 <div align="center">
 <img src="assets/taxonomy.png" alt="taxonomy" width="64%" />
 </div>
-## Noise Imitation based Adversarial Training
+## Methodology
 
 >  one unified framework capable of achieving robust performance against four distinct forms of potential data imperfections, which include (random, temporal, and structural temporal) modality feature missing, entire modality missing, ASR error, as well as attacks on text modality, simultaneously.
 
