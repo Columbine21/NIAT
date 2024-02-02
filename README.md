@@ -1,6 +1,6 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 # NIAT
-> Pytorch implementation for codes in [Noise Imitation Based Adversarial Training for Robust Multimodal Sentiment Analysis (Accepted by IEEE Transactions on Multimedia)](https://arxiv.org/abs/2102.04830). For baseline method, please see our another repo [MMSA](https://github.com/thuiar/MMSA) for more details, which is a scalable framework for MSA.
+> Pytorch implementation for codes in [Noise Imitation Based Adversarial Training for Robust Multimodal Sentiment Analysis (Accepted by IEEE Transactions on Multimedia)](https://ieeexplore.ieee.org/abstract/document/10103636). For baseline method, please see our another repo [MMSA](https://github.com/thuiar/MMSA) for more details, which is a scalable framework for MSA.
 
 ## Noise Taxonomy
 
